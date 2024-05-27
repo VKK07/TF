@@ -107,7 +107,7 @@ resource "aws_instance" "usa-housing_instance" {
   associate_public_ip_address = true
   user_data                   = file("userdata.sh")
   tags = {
-    Name = "usa-housing_Instance"
+    Name = "usa_Instance"
   }
 }
 
