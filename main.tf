@@ -55,8 +55,8 @@ resource "aws_security_group" "usa-housing_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
   ingress {
-    from_port   = 8000
-    to_port     = 8000
+    from_port   = 7990
+    to_port     = 7990
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
