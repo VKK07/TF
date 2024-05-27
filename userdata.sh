@@ -1,8 +1,8 @@
 #!/bin/bash
 sudo yum install git -y
-git clone https://github.com/VKK07/fish.git
+git clone https://github.com/VKK07/USA-Housing.git
 cd /
-cd fish/
+cd USA-Housing/
 sudo yum install python3 python3-pip -y
 pip3 install -r requirements.txt
 screen -m -d python3 app.py
