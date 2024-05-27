@@ -100,7 +100,7 @@ variable "subnet_cidr" {
 # Creating EC2 instance
 resource "aws_instance" "usa-housing_instance" {
   ami                         = "ami-0d94353f7bad10668"
-  instance_type               = "t2.medium"
+  instance_type               = "t3.medium"
   key_name                    = "ki-key"
   vpc_security_group_ids      = ["${aws_security_group.usa-housing_sg.id}"]
   subnet_id                   = aws_subnet.main.id
