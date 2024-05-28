@@ -101,7 +101,7 @@ variable "subnet_cidr" {
 resource "aws_instance" "usa-housing_instance" {
   ami                         = "ami-0d94353f7bad10668"
   instance_type               = "t3.medium"
-  key_name                    = "ki-key"
+  key_name                    = "sai"
   vpc_security_group_ids      = ["${aws_security_group.usa-housing_sg.id}"]
   subnet_id                   = aws_subnet.main.id
   associate_public_ip_address = true
@@ -110,12 +110,6 @@ resource "aws_instance" "usa-housing_instance" {
     Name = "usa_Instance"
   }
 }
-
-resource "aws_key_pair" "kiran" {
-  key_name   = "ki-key"
-  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD3F6tyPEFEzV0LX3X8BsXdMsQz1x2cEikKDEY0aIj41qgxMCP/iteneqXSIFZBp5vizPvaoIR3Um9xK7PGoW8giupGn+EPuxIA4cDM4vzOqOkiMPhz5XK0whEjkVzTo4+S0puvDZuwIsdiW9mxhJc7tgBNL0cYlWSYVkz4G/fslNfRPW5mYAM49f4fhtxPb5ok4Q2Lg9dPKVHO/Bgeu5woMc7RY0p1ej6D4CKFE6lymSDJpW0YHX/wqE9+cfEauh7xZcG0q9t2ta6F6fmX0agvpFyZo8aFbXeUBr7osSCJNgvavWbM/06niWrOvYX2xwWdhXmXSrbX8ZbabVohBK41 email@example.com"
-}
-
 
 output "public_ip" {
   value = aws_instance.usa-housing_instance[*].public_ip
