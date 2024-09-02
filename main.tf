@@ -99,9 +99,9 @@ variable "subnet_cidr" {
 
 # Creating EC2 instance
 resource "aws_instance" "usa-housing_instance" {
-  ami                         = "ami-0d191299f2822b1fa"
-  instance_type               = "t3.medium"
-  key_name                    = "sai"
+  ami                         = "ami-02c21308fed24a8ab"
+  instance_type               = "t2.micro"
+  key_name                    = "saaa"
   vpc_security_group_ids      = ["${aws_security_group.usa-housing_sg.id}"]
   subnet_id                   = aws_subnet.main.id
   associate_public_ip_address = true
