@@ -99,7 +99,7 @@ variable "subnet_cidr" {
 
 # Creating EC2 instance
 resource "aws_instance" "usa-housing_instance" {
-  ami                         = "ami-02c21308fed24a8ab"
+  ami                         = "ami-0a5c3558529277641"
   instance_type               = "t2.micro"
   key_name                    = "saaa"
   vpc_security_group_ids      = ["${aws_security_group.usa-housing_sg.id}"]
